@@ -1,6 +1,6 @@
 # Beamer IST
 
-A LaTeX Beamer template in the style of [https://tecnico.ulisboa.pt/pt/sobre-o-tecnico/institucional/logo-e-manual-de-identidade/](IST's presentation templates).
+A LaTeX Beamer template in the style of [IST's presentation templates](https://tecnico.ulisboa.pt/pt/sobre-o-tecnico/institucional/logo-e-manual-de-identidade/).
 
 ## Screenshots
 
