@@ -1,0 +1,87 @@
+% !TEX root = ./main.tex
+
+% -----------------------------------------------------------------------------
+
+\documentclass[t]{beamer}
+\usetheme{IST}
+
+% Packages and commands
+\input{preamble}
+
+% -----------------------------------------------------------------------------
+
+\title{Title}
+\subtitle{Subtitle}
+\author{Author\\n°XXXXX}
+\institute{Instituto Superior Técnico}
+\date[\number\day/\number\month/\number\year]{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\section[Outline]{}
+
+\frame{\tableofcontents}
+
+\section{Introduction}
+
+\frame{
+	\frametitle{Example Slide}
+	\framesubtitle{This one has a subtitle}
+	
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+	\vspace{\baselineskip}
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+}
+
+\section{Examples}
+
+\subsection{Subsection about examples}
+
+\frame{
+	\frametitle{Example Bullet List}
+
+	\begin{itemize}
+	\item Bullet 1
+	\begin{itemize}
+		\item Sub-bullet
+		\begin{itemize}
+			\item Sub-sub-bullet
+		\end{itemize}
+	\end{itemize}
+	\item Bullet 2
+	\end{itemize}
+}
+
+\frame{
+	\frametitle{Example Theorem}
+
+    \begin{theorem}
+    Proof:
+    \[
+    a^2 + b^2 = c^2 \qed
+        \]
+    \end{theorem}
+}
+
+% Use a group to change background color for some frames
+\begingroup
+\setbeamercolor*{background canvas}{bg=white}
+\frame{
+	\frametitle{Example Figure}
+
+    \vfill
+	\begin{figure}
+	\centering
+	\includegraphics[width=5cm]{Images/Alameda.jpg}
+	\caption{Campus Alameda}
+	\label{fig:campus}
+	\end{figure}
+}
+\endgroup
+
+\section{Questions}
+
+\end{document}
