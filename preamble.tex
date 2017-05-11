@@ -1,0 +1,392 @@
+% #############################################################################
+% Preamble for IST-Thesis-MSc in English or Portuguese
+% Required Packages and commands
+% --> Please Choose the MAIN LANGUAGE for the Thesis in package BABEL (below)
+% !TEX root = ./main.tex
+% #############################################################################
+% IST-Thesis-MSc
+% Version 1.0, August 2014
+% BY: Rui Santos Cruz, rui.s.cruz@tecnico.ulisboa.pt
+% #############################################################################
+%
+% -----------------------------------------------------------------------------
+% PACKAGE ucs:
+% -----------------------------------------------------------------------------
+% The 'ucs' package provides support for using UTF-8 in LaTeX documents. 
+% However in most situations it is not required.
+\usepackage{ucs}
+
+% -----------------------------------------------------------------------------
+% PACKAGE utf8x:
+% -----------------------------------------------------------------------------
+% The 'utf8x' package contains support for using UTF-8 as input encoding. 
+\usepackage[utf8x]{inputenc}
+
+% -----------------------------------------------------------------------------
+% PACKAGE babel:
+% -----------------------------------------------------------------------------
+% The 'babel' package may correct some hyphenation issues of LaTeX. 
+% Select your MAIN LANGUAGE for the Thesis with the 'main=' option.
+\usepackage[main=english,portuguese]{babel}
+
+% -----------------------------------------------------------------------------
+% PACKAGE iflang:
+% -----------------------------------------------------------------------------
+% The 'iflang' package is used to help determine the language being used. 
+\usepackage{iflang}
+
+% -----------------------------------------------------------------------------
+% PACKAGE scrbase:
+% -----------------------------------------------------------------------------
+% The 'scrbase' package is used to help redefining document structure.
+\usepackage{scrbase}
+
+% -----------------------------------------------------------------------------
+% PACKAGE enumerate:
+% -----------------------------------------------------------------------------
+% For enhanced enumeration of lists
+%\usepackage{enumerate}
+
+% -----------------------------------------------------------------------------
+% PACKAGE latexsym:
+% -----------------------------------------------------------------------------
+% Defines additional latex symbols. 
+% May be required for thesis with many math symbols.
+%\usepackage{latexsym}
+
+% -----------------------------------------------------------------------------
+% PACKAGE mathtools, amsmath, amsthm, amssymb, amsfonts:
+% -----------------------------------------------------------------------------
+% These packages are typically required. 
+% Among many other things they add the possibility to put symbols in bold
+% by using \boldsymbol (not \mathbf); defines additional fonts and symbols;
+% adds the \eqref command for citing equations.
+\usepackage{mathtools, amsmath, amsthm, amssymb, amsfonts}
+
+% -----------------------------------------------------------------------------
+% PACKAGE multirow, colortbl, ctable, longtable:
+% -----------------------------------------------------------------------------
+% These packages are most usefull for advanced tables. 
+% 'multirow' allows to join rows throuhg the command \multirow which works
+% similarly with the command \multicolumn.
+% The 'colortbl' package allows to color the table (foreground and background)
+% The 'ctable' package provides commands to easily typeset centered or left or
+% right aligned tables.
+% The package 'booktabs' provide some additional commands to enhance
+% the quality of tables
+% The 'longtable' package is only required when tables extend beyond the length
+% of one page, which typically does not happen and should be avoided
+
+\usepackage{multicol}
+\usepackage{multirow}                 
+%\usepackage{colortbl}
+%\usepackage{ctable}
+%\usepackage{booktabs}
+%\usepackage{longtable}
+
+\usepackage{tabularx,ragged2e,booktabs,caption}
+\usepackage{tabulary}
+\usepackage{array}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+\captionsetup{belowskip=8pt,aboveskip=4pt}
+\renewcommand{\arraystretch}{1.05}
+
+\usepackage{adjustbox}
+
+% -----------------------------------------------------------------------------
+% PACKAGES graphicx, subfigure:
+% -----------------------------------------------------------------------------
+% The package 'graphicx' supports formats PNG and JPG.
+% Package 'subfigure' allows to place figures within figures with own caption. 
+% For each of the subfigures use the command \subfigure.
+\usepackage{graphicx}
+\usepackage[hang,small,bf,tight]{subfigure}
+
+% -----------------------------------------------------------------------------
+% PACKAGE caption:
+% -----------------------------------------------------------------------------
+% The 'caption' package offers customization of captions in floating 
+% environments such figure and table
+%\usepackage[hang,small,bf]{caption}
+%\usepackage[format=hang,labelfont=bf,font=small]{caption} 
+% the following customization adds vertical space between caption and the table
+%\captionsetup[table]{skip=10pt}
+
+% -----------------------------------------------------------------------------
+% PACKAGE algorithmic, algorithm, algorithm2e:
+% -----------------------------------------------------------------------------
+% These packages are required if you need to describe an algorithm.
+% The preference is for using 'algorithm2e'
+%\usepackage{algorithmic}
+%\usepackage[chapter]{algorithm}
+%\usepackage[ruled,vlined,algochapter,norelsize,\languagename]{algorithm2e}
+
+% -----------------------------------------------------------------------------
+% PACKAGE listings
+% -----------------------------------------------------------------------------
+% These packages are required if you need to list code snippets.
+\usepackage{listings}
+
+% -----------------------------------------------------------------------------
+% Re-define listings captions and titles based on language.
+\newcaptionname{portuguese}{\lstlistingname}{Listagem} % Listings CAPTIONS
+\newcaptionname{portuguese}{\lstlistlistingname}{Listagens} % LIST of LISTINGS
+
+% -----------------------------------------------------------------------------
+% PACKAGES xcolor, color
+% -----------------------------------------------------------------------------
+% These packages are required if you need to list code snippets.
+\usepackage{xcolor}
+\usepackage{color}
+
+% -----------------------------------------------------------------------------
+% PACKAGE setspace:
+% ----------------------------------------------------------------------------
+% Pro­vides sup­port for set­ting the spac­ing be­tween lines in a doc­u­ment. 
+% Pack­age op­tions in­clude sin­glespac­ing, one­half­s­pac­ing, and dou­blespac­ing. 
+% Al­ter­na­tively the spac­ing can be changed as re­quired with:
+% \sin­glespac­ing, \one­half­s­pac­ing, and \dou­blespac­ing com­mands
+\usepackage{setspace}
+
+% -----------------------------------------------------------------------------
+% PACKAGE paralist
+% -----------------------------------------------------------------------------
+% This package provides the 'inparaenum' environment for inline lists
+%\usepackage{paralist}
+
+% -----------------------------------------------------------------------------
+% PACKAGE cite:
+% -----------------------------------------------------------------------------
+% The 'cite' package will result in citation numbers being automatically
+% sorted and properly "ranged". i.e.,
+% [1], [2], [5]--[7], [9]
+\usepackage{cite}
+\usepackage[numbers]{natbib}
+
+% -----------------------------------------------------------------------------
+% PACKAGE acronym:
+% -----------------------------------------------------------------------------
+% The package 'acronym' garantees that all acronyms definitions are 
+% given at the first usage. 
+% IMPORTANT: do not use acronyms in titles/captions; otherwise the definition 
+% will appear on the table of contents.
+\usepackage[printonlyused]{acronym}
+
+% -----------------------------------------------------------------------------
+% PACKAGE url:
+% -----------------------------------------------------------------------------
+% Provides better support for handling and breaking URLs.
+\usepackage{url} 
+
+% #############################################################################
+% ADDITIONAL COMMANDS AND CONFIGURATIONS
+% #############################################################################
+% This commmand allows to place horizontal lines with a custom width... 
+% replaces the standard hline command
+\newcommand{\hlinew}[1]{%
+  \noalign{\ifnum0=`}\fi\hrule \@height #1 \futurelet
+   \reserved@a\@xhline}
+   
+% -----------------------------------------------------------------------------
+% This command defines some marks... USEFUL FOR TABLES.
+\def\Mark#1{\raisebox{0pt}[0pt][0pt]{\textsuperscript{\footnotesize\ensuremath{\ifcase#1\or *\or \dagger\or \ddagger\or%
+    \mathsection\or \mathparagraph\or \|\or **\or \dagger\dagger%
+    \or \ddagger\ddagger \else\textsuperscript{\expandafter\romannumeral#1}\fi}}}}
+
+% -----------------------------------------------------------------------------
+% The following configurations are used for LISTINGS of certain languages
+
+\lstdefinestyle{XML} {
+	language=XML,
+	extendedchars=true, 
+	breaklines=true,
+	breakatwhitespace=true,
+	emph={},
+	emphstyle=\color{red},
+	basicstyle=\small,
+	xleftmargin=17pt,
+	columns=fullflexible,
+	commentstyle=\color{gray}\upshape,
+	morestring=[b][\color{brown}]",
+	morecomment=[s]{<?}{?>},
+	morecomment=[s][\color{forestgreen}]{<!--}{-->},
+	keywordstyle=\color{orangered},
+	stringstyle=\ttfamily\color{black},
+	% stringstyle=\ttfamily\color{black}\normalfont,
+	tagstyle=\color{blue},
+	% tagstyle=\color{darkblue}\bf,
+	morekeywords={asn,action,addrType,abilityNAT,audioSampleRate,audiChannels,,bandwidth,bitmapSize,bitRate,connection,codecs,concurrentLinks,dependency,duration,frameRate,from,height,ip,id,lang,mimeType,onlineTime,peerMode,port,priority,peerProtocol,property,release,to,tier,type,transactionID,url,uploadBWlevel,version,width},
+	otherkeywords={attribute,xmlns,schemaLocation,PresentationType,availabilityStartTime,availabilityEndTime,minimumUpdatePeriod,minBufferTime,UpdateTime},
+}
+
+\lstdefinelanguage{Assembler}{
+	morecomment=[l];,
+	keywords={ADD,ADDC,SUB,SUBB,CMP,MUL,DIV,MOD,NEG,AND,OR,NOT,XOR,TEST,BIT,SET,EI,EI0,EI1,EI2,EI3,SETC,EDMA,CLR,DI,DI0,DI1,DI2,DI3,CLRC,SHR,SHL,SHRA,SHLA,ROR,ROL,RORC,ROLC,MOV,MOVB,MOVBS,MOVP,MOVL,MOVH,SWAP,PUSH,POP,JZ,JNZ,JN,JNN,JP,JNP,JC,JNC,JV,JNV,JEQ,JNE,JLT,JLE,JGT,JGE,JA,JAE,JB,JBE,JMP,CALL,CALLF,RET,RETF,SWE,RFE,NOP},
+	morekeywords={EQU,TABLE,WORD,STRING,PLACE},
+} 
+
+\lstdefinestyle{coloredASM}{
+	language=Assembler,
+	extendedchars=false,
+	breaklines=true,
+	tabsize=2,
+	numberstyle=\tiny,
+	numbers=left,
+	breakatwhitespace=true,
+	emph={},
+	emphstyle=\color{red},
+	fontadjust=true,
+	basicstyle=\small\ttfamily,
+	% basicstyle=\footnotesize\ttfamily,
+	columns=fixed,
+	xleftmargin=17pt,
+	framexleftmargin=17pt,
+	framexrightmargin=5pt,
+	framexbottommargin=4pt,
+	commentstyle=\color{forestgreen}\upshape,
+	morestring=[b][\color{brown}]",
+	keywordstyle=\color{darkblue},
+	stringstyle=\ttfamily\color{black},
+	literate={á}{{\'a}}1 {ã}{{\~a}}1 {â}{{\^a}}1 {é}{{\'e}}1 {É}{{\'E}}1 {ê}{{\^e}}1 {õ}{{\~o}}1 {ó}{{\'o}}1 {í}{{\'i}}1 {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1,
+}    
+
+\lstdefinelanguage{CSS}{
+	sensitive=true,
+	morecomment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	morestring=[b]',
+	morestring=[b]",
+	alsoletter={:},
+	alsodigit={-},
+	keywords={color,background-image:,margin,padding,font,weight,display,position,top,left,right,bottom,list,style,border,size,white,space,min,width, transition:, transform:, transition-property, transition-duration, transition-timing-function}
+}
+
+% JavaScript
+\lstdefinelanguage{JavaScript}{
+	morecomment=[s]{/*}{*/},
+	morecomment=[l]//,
+	morestring=[b]",
+	morestring=[b]',
+	morekeywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break}
+}
+
+\lstdefinelanguage{HTML5}{
+	language=html,
+	sensitive=true,	
+	alsoletter={<>=-},	
+	morecomment=[s]{<!-}{-->},
+	tag=[s],
+	otherkeywords={
+	% General
+	>,
+	% Standard tags
+	<!DOCTYPE,
+	</html, <html, <head, <title, </title, <style, </style, <link, </head, <meta, />,
+	% body
+	</body, <body,
+	% Divs
+	</div, <div, </div>, 
+	% Paragraphs
+	</p, <p, </p>,
+	% scripts
+	</script, <script,
+	% More tags...
+	<canvas, /canvas>, <svg, <rect, <animateTransform, </rect>, </svg>, <video, <source, <iframe, </iframe>, </video>, <image, </image>, <header, </header, <article, </article},
+	ndkeywords={
+	% General
+	=,
+	% HTML attributes
+	charset=, src=, id=, width=, height=, style=, type=, rel=, href=,
+	% SVG attributes
+	fill=, attributeName=, begin=, dur=, from=, to=, poster=, controls=, x=, y=, repeatCount=, xlink:href=,
+	% properties
+	margin:, padding:, background-image:, border:, top:, left:, position:, width:, height:, margin-top:, margin-bottom:, font-size:, line-height:,
+	% CSS3 properties
+	transform:, -moz-transform:, -webkit-transform:,
+	animation:, -webkit-animation:,
+	transition:,  transition-duration:, transition-property:, transition-timing-function:,
+	}
+}
+
+\lstdefinestyle{htmlcssjs} {%
+	% General design
+	backgroundcolor=\color{editorGray},
+		fontadjust=true,
+	basicstyle=\small\ttfamily,   
+	frame=b,
+	% line-numbers
+	xleftmargin={0.75cm},
+	numbers=left,
+	stepnumber=1,
+	firstnumber=1,
+	numberfirstline=true,	
+	% Code design
+	identifierstyle=\color{black},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywordstyle=\color{editorGreen}\bfseries,
+	stringstyle=\color{editorOcher}\ttfamily,
+	commentstyle=\color{brown}\ttfamily,
+	% Code
+	language=HTML5,
+	alsolanguage=JavaScript,
+	alsodigit={.:;},	
+	tabsize=2,
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,
+	% German umlauts
+	literate=%
+	{Ö}{{\"O}}1
+	{Ä}{{\"A}}1
+	{Ü}{{\"U}}1
+	{ß}{{\ss}}1
+	{ü}{{\"u}}1
+	{ä}{{\"a}}1
+	{ö}{{\"o}}1
+}
+
+\lstdefinestyle{py} {%
+	language=python,
+	literate=%
+	*{0}{{{\color{lightred}0}}}1
+	{1}{{{\color{lightred}1}}}1
+	{2}{{{\color{lightred}2}}}1
+	{3}{{{\color{lightred}3}}}1
+	{4}{{{\color{lightred}4}}}1
+	{5}{{{\color{lightred}5}}}1
+	{6}{{{\color{lightred}6}}}1
+	{7}{{{\color{lightred}7}}}1
+	{8}{{{\color{lightred}8}}}1
+	{9}{{{\color{lightred}9}}}1,
+	basicstyle=\small\ttfamily,
+	numbers=left,
+	% numberstyle=\tiny,
+	% stepnumber=2,
+	numbersep=5pt,
+	tabsize=4,
+	extendedchars=true,
+	breaklines=true,
+	keywordstyle=\color{blue}\bfseries,
+	frame=b,
+	commentstyle=\color{brown}\itshape,
+	stringstyle=\color{editorOcher}\ttfamily,
+	showspaces=false,
+	showtabs=false,
+	xleftmargin=17pt,
+	framexleftmargin=17pt,
+	framexrightmargin=5pt,
+	framexbottommargin=4pt,
+	backgroundcolor=\color{lightgray},
+	showstringspaces=false,
+}
+
+% -----------------------------------------------------------------------------
+
+% Global font
+\usepackage{helvet}
+
+% Don't report over-full boxes if over-edge is small
+\hfuzz2pt
+\vfuzz2pt

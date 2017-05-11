@@ -1,0 +1,92 @@
+\usetheme{Rochester}
+
+\RequirePackage{pgf}
+
+% -----------------------------------------------------------------------------
+% Colors
+% -----------------------------------------------------------------------------
+
+\definecolor{istblue}{RGB}{0,157,224}
+\definecolor{istlightgray}{RGB}{232,235,236}
+\definecolor{istgray}{RGB}{70,85,95}
+
+\setbeamercolor*{Title bar}{fg=istgray, bg=white}
+\setbeamercolor*{frametitle}{parent=Title bar}
+\setbeamercolor*{Location bar}{fg=istgray,bg=white}
+\setbeamercolor*{block title}{bg=istblue,fg=white}
+\setbeamercolor*{block body}{bg=white,fg=istgray}
+\setbeamercolor*{block title alerted}{bg=istblue,fg=white}
+\setbeamercolor*{normal text}{bg=istlightgray,fg=black}
+\setbeamercolor*{section in head/foot}{bg=istblue,fg=white}
+
+\usecolortheme[named=istblue]{structure}
+
+% -----------------------------------------------------------------------------
+% Styling
+% -----------------------------------------------------------------------------
+
+\setbeamertemplate{blocks}[shadow=false]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent}
+
+\beamer@headheight=0.15\paperheight
+
+\setbeamerfont{section in head/foot}{size=\tiny,series=\normalfont}
+\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{framesubtitle}{size=\scriptsize}
+
+\pgfdeclareimage[height=\beamer@headheight]{logo}{Images/IST_A_CMYK_POS.png}
+
+\AtBeginSection[]{
+    \begin{frame}
+        \vskip \beamer@headheight
+        \vfill
+        \centering
+        \begin{beamercolorbox}[sep=8pt,center]{title}
+            \usebeamerfont{title}\insertsectionhead\par%
+        \end{beamercolorbox}
+        \vfill
+    \end{frame}
+}
+
+\AtBeginSubsection[]{
+    \begin{frame}
+        \vskip \beamer@headheight
+        \vfill
+        \centering
+        \usebeamerfont{title}\insertsubsectionhead\par%
+        \vfill
+    \end{frame}
+}
+
+\setbeamertemplate{frametitle}{
+    \vskip-0.25\beamer@headheight
+    \vskip-\baselineskip
+    \vskip-0.40cm
+    \hskip-0.50cm\usebeamerfont*{frametitle}\insertframetitle
+    \vskip 0.05cm
+    \hskip-0.50cm\usebeamerfont*{framesubtitle}\insertframesubtitle
+    \vskip 0.25cm
+}
+
+\setbeamertemplate{headline}{
+    \begin{beamercolorbox}[wd=\paperwidth,ht=\beamer@headheight]{Location bar}
+        \usebeamerfont{section in head/foot}
+        \hfill\pgfuseimage{logo}
+    \end{beamercolorbox}
+}
+
+\setbeamertemplate{footline}{
+    \linethickness{0pt}
+    \framelatex{
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=0.40cm,dp=0.25cm,left]{Location bar}
+            \usebeamerfont{date in head/foot}\hspace*{0.50cm}\insertshortdate{}%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=0.40cm,dp=0.25cm,center]{Location bar}
+            \usebeamerfont{institute in head/foot}\insertinstitute%
+        \end{beamercolorbox}%
+        \begin{beamercolorbox}[wd=.333333\paperwidth,ht=0.40cm,dp=0.25cm,right]{Location bar}
+            \insertframenumber{} / \inserttotalframenumber\hspace*{0.50cm}%
+        \end{beamercolorbox}
+    }
+}
