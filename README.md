@@ -5,7 +5,9 @@ A LaTeX Beamer template in the style of [IST's presentation templates](https://t
 ## Screenshots
 
 ![Title](Images/Sample-0.png)
+---
 ![TOC](Images/Sample-1.png)
+---
 ![Theorem](Images/Sample-7.png)
 
 ## Scripts
